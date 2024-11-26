@@ -1,0 +1,16 @@
+﻿<Window x:Class="lithium_toolbox.Timer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lithium_toolbox"
+        mc:Ignorable="d"
+        Title="timer" Height="300" Width="800" Closed="Window_Closed" Topmost="True">
+    <Grid>
+        <Label x:Name="timeDisplay" Content="Label" Margin="10,10,10,0" VerticalAlignment="Top" Height="74" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="1 Minute" HorizontalAlignment="Left" Margin="10,214,0,10" Width="160" Click="M1Button_Click"/>
+        <Button Content="3 Minutes" HorizontalAlignment="Left" Margin="175,214,0,10" Width="160" Click="M3Button_Click"/>
+        <Button Content="5 Minutes" HorizontalAlignment="Left" Margin="340,214,0,10" Width="160"/>
+        <Button Content="10 Minutes" HorizontalAlignment="Left" Margin="505,214,0,10" Width="160"/>
+    </Grid>
+</Window>
