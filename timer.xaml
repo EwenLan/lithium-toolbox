@@ -5,12 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lithium_toolbox"
         mc:Ignorable="d"
-        Title="timer" Height="300" Width="800" Closed="Window_Closed" Topmost="True">
+        Title="timer" Height="116" Width="1060" Closed="Window_Closed" Topmost="True" ResizeMode="CanMinimize" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" UseLayoutRounding="False" Background="#FF1A2224" Foreground="#FFE8E8E8">
     <Grid>
-        <Label x:Name="timeDisplay" Content="Label" Margin="10,10,10,0" VerticalAlignment="Top" Height="74" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="1 Minute" HorizontalAlignment="Left" Margin="10,214,0,10" Width="160" Click="M1Button_Click"/>
-        <Button Content="3 Minutes" HorizontalAlignment="Left" Margin="175,214,0,10" Width="160" Click="M3Button_Click"/>
-        <Button Content="5 Minutes" HorizontalAlignment="Left" Margin="340,214,0,10" Width="160"/>
-        <Button Content="10 Minutes" HorizontalAlignment="Left" Margin="505,214,0,10" Width="160"/>
+        <Grid Margin="10,10,0,0" Height="96" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1040">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="104"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="D0Label" Content="T" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="0" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D1Label" Content="i" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="1" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D2Label" Content="m" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="2" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D3Label" Content="e" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="3" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D4Label" Content="'" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="4" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D5Label" Content="s" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="5" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D6Label" Content=" " FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="6" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D7Label" Content="U" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="7" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D8Label" Content="p" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="8" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+            <Label Name="D9Label" Content="!" FontFamily="Century Gothic" FontSize="72" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="4,0,4,0" Grid.Column="9" Foreground="#FFFFFFFF" Background="#FF2A2E30"/>
+        </Grid>
+        <Grid Opacity="1" MouseEnter="Button_MouseEnter" MouseLeave="M1Button_MouseLeave" Margin="870,10,10,10">
+            <Button x:Name="M1Button" Content="Add 1 Minute" Margin="0,0,0,0" Click="M1Button_Click" Height="30" VerticalAlignment="Top" />
+            <Button x:Name="ClearButton" Content="Clear" Margin="0,33,0,0" Click="ClearButton_Click" Height="30" VerticalAlignment="Top"/>
+            <Button x:Name="ExitButton" Content="Exit" Margin="0,66,0,0" Click="ExitButton_Click" Height="30" VerticalAlignment="Top"/>
+        </Grid>
     </Grid>
 </Window>

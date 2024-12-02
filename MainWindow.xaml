@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lithium_toolbox"
         mc:Ignorable="d"
-        Title="MainWindow" Height="100" Width="400"
-        Topmost="True" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        Title="MainWindow" Height="72" Width="120"
+        Topmost="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
 
-        <Button x:Name="TimerFunctionButton" Content="Timer" HorizontalAlignment="Left" Margin="10,10,0,10" Width="90" Click="TimerFunctionButton_Click"/>
-        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="105,10,0,10" Width="90" Click="ExitButton_Click"/>
+        <Button x:Name="TimerFunctionButton" Content="Timer" HorizontalAlignment="Left" Margin="10,10,0,10" Width="48" Click="TimerFunctionButton_Click"/>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="63,10,0,10" Width="48" Click="ExitButton_Click"/>
     </Grid>
 </Window>
