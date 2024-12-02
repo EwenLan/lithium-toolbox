@@ -59,7 +59,12 @@ namespace lithium_toolbox
 
         private void M1Button_Click(object sender, RoutedEventArgs e)
         {
-            this.countDownTimer.AddTimer(1);
+            var minutesInput = 0;
+            if (!int.TryParse(MinuteInput.Text, out minutesInput))
+            {
+                minutesInput = 1;
+        }
+            this.countDownTimer.SetTimer(minutesInput);
         }
 
         private void displayRefreshHandler(object sender, EventArgs e)
@@ -93,6 +98,7 @@ namespace lithium_toolbox
             M1Button.Opacity = 1.0;
             ClearButton.Opacity = 1.0;
             ExitButton.Opacity = 1.0;
+            MinuteInput.Opacity = 1.0;
         }
 
         private void M1Button_MouseLeave(object sender, MouseEventArgs e)
@@ -100,6 +106,24 @@ namespace lithium_toolbox
             M1Button.Opacity = 0.0;
             ClearButton.Opacity = 0.0;
             ExitButton.Opacity = 0.0;
+            MinuteInput.Opacity = 0.0;
+        }
+
+        private void MinuteInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (M1Button == null)
+            {
+                return;
+        }
+            var minutesInput = 0;
+            // 字符串解析失败或解析成功且为1分钟时，显示单数形式
+            if ((int.TryParse(MinuteInput.Text, out minutesInput) && minutesInput == 1) || !int.TryParse(MinuteInput.Text, out minutesInput))
+            {
+                M1Button.Content = "Minute Start";
+                return;
+            }
+            // 显示复数形式
+            M1Button.Content = "Minutes Start";
         }
     }
 
@@ -173,13 +197,13 @@ namespace lithium_toolbox
             }
         }
 
-        public void AddTimer(int minutes)
+        public void SetTimer(int minutes)
         {
-            if (timesUpTime < DateTime.Now)
+            timesUpTime = DateTime.Now + TimeSpan.FromMinutes(minutes);
             {
                 timesUpTime = DateTime.Now;
             }
-            timesUpTime = timesUpTime + TimeSpan.FromMinutes(minutes);
+
         }
 
         public void ClearTimer()
