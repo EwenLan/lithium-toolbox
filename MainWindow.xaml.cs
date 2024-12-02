@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -26,12 +30,12 @@ namespace lithium_toolbox
             var timerWindow = new Timer(this);
             timerWindow.Show();
             this.Hide();
-        }
+    }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
+}
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
