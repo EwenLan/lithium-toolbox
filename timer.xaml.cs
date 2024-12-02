@@ -63,7 +63,7 @@ namespace lithium_toolbox
             if (!int.TryParse(MinuteInput.Text, out minutesInput))
             {
                 minutesInput = 1;
-        }
+            }
             this.countDownTimer.SetTimer(minutesInput);
         }
 
@@ -114,7 +114,7 @@ namespace lithium_toolbox
             if (M1Button == null)
             {
                 return;
-        }
+            }
             var minutesInput = 0;
             // 字符串解析失败或解析成功且为1分钟时，显示单数形式
             if ((int.TryParse(MinuteInput.Text, out minutesInput) && minutesInput == 1) || !int.TryParse(MinuteInput.Text, out minutesInput))
@@ -200,11 +200,8 @@ namespace lithium_toolbox
         public void SetTimer(int minutes)
         {
             timesUpTime = DateTime.Now + TimeSpan.FromMinutes(minutes);
-            {
-                timesUpTime = DateTime.Now;
-            }
-
         }
+
 
         public void ClearTimer()
         {
